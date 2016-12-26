@@ -15,6 +15,7 @@ public final class Request {
 	}
 
 	public static ClientHttpResponse execute(final String request) throws IOException {
+
 		if (request == null) {
 			throw new NullPointerException("Request is null");
 		}
@@ -25,6 +26,7 @@ public final class Request {
 		} catch (URISyntaxException e) {
 			throw new IOException("Incorrect request: " + request);
 		}
+
 		return httpRequest.execute();
 	}
 

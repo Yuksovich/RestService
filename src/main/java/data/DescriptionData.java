@@ -15,7 +15,7 @@ public class DescriptionData {
 		return (String[]) list.toArray();
 	}
 
-	public class Builder {
+	public static class Builder {
 		private final static String NO_DESCRIPTION = "no descriprion";
 		private final List<String> list = new LinkedList<>();
 

@@ -9,8 +9,8 @@ public enum ThreadPool {
 
 	INSTANCE;
 
-	private final static int MAX_REQUSTS_NUMBER = 5;
-	private final ExecutorService pool = Executors.newFixedThreadPool(MAX_REQUSTS_NUMBER);
+	private final static int MAX_REQUESTS_NUMBER = 5;
+	private final ExecutorService pool = Executors.newFixedThreadPool(MAX_REQUESTS_NUMBER);
 
 	public <T> Future<T> submit(Callable<T> callable) {
 		return pool.submit(callable);
