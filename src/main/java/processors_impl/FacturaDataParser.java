@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FacturaDataParser implements DataParser<Map<String, String>> {
+public final class FacturaDataParser implements DataParser<Map<String, String>> {
     private FacturaDataParser() {
     }
 
@@ -46,7 +46,7 @@ public class FacturaDataParser implements DataParser<Map<String, String>> {
 
     @Override
     public Map<String, String> parse(final InputStream inputStream, final String bankId) throws Exception {
-        if (inputStream == null) {
+        if (inputStream == null||bankId == null) {
             return null;
         }
         final JsonParser parser = Json.createParser(inputStream);
@@ -96,8 +96,7 @@ public class FacturaDataParser implements DataParser<Map<String, String>> {
 
     private Map<String, String> getResponse(final List<String> uiidList) throws IOException {
 
-
-        Map<String, String> map = new HashMap<>();
+        final Map<String, String> map = new HashMap<>();
         ClientHttpResponse response = null;
         InputStream inputStream = null;
 
@@ -105,7 +104,6 @@ public class FacturaDataParser implements DataParser<Map<String, String>> {
             try {
                 response = Request.execute(String.format(UNFORMATTED_REQUEST_TO_FACTURA, uiid));
                 inputStream = response.getBody();
-
                 map.put(uiid, getDescription(inputStream));
             } finally {
                 if (inputStream != null) {
