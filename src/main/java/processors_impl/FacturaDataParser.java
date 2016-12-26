@@ -19,11 +19,14 @@ public class FacturaDataParser implements DataParser<Map<String, String>> {
     }
 
     private static final String UNFORMATTED_REQUEST_TO_FACTURA = "https://demo.faktura.ru/mobws/3.0/json/getBankPOIDescription?objectUiid=%s";
-
     private static final String NO_DESCRIPTION = "no description";
 
     private enum Tags {
-        BANK_ID("bankBic"), UIID("uiid"), DESCRIPTION("description"), RESPONSE("response"), OBJECT("object");
+        BANK_ID("bankBic"),
+        UIID("uiid"),
+        DESCRIPTION("description"),
+        RESPONSE("response"),
+        OBJECT("object");
 
         private final String tagName;
 
