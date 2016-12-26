@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/RestService.iml" filepath="$PROJECT_DIR$/.idea/RestService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestService.iml" filepath="$PROJECT_DIR$/.idea/modules/RestService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestService_main.iml" filepath="$PROJECT_DIR$/.idea/modules/RestService_main.iml" group="RestService" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestService_test.iml" filepath="$PROJECT_DIR$/.idea/modules/RestService_test.iml" group="RestService" />
     </modules>
   </component>
 </project>
