@@ -27,7 +27,7 @@ public class FacturaDataParser implements DataParser<JsonObject> {
 
 		private final String tagName;
 
-		private Tags(final String tagName) {
+		Tags(final String tagName) {
 			this.tagName = tagName;
 		}
 

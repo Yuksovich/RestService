@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RestServiceFTC.iml" filepath="$PROJECT_DIR$/RestServiceFTC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/RestService.iml" filepath="$PROJECT_DIR$/.idea/RestService.iml" />
     </modules>
   </component>
 </project>

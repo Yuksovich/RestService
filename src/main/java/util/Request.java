@@ -19,7 +19,7 @@ public final class Request {
 			throw new NullPointerException("Request is null");
 		}
 		final SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
-		ClientHttpRequest httpRequest = null;
+		ClientHttpRequest httpRequest;
 		try {
 			httpRequest = requestFactory.createRequest(new URI(request), HttpMethod.POST);
 		} catch (URISyntaxException e) {
