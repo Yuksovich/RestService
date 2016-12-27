@@ -1,7 +1,6 @@
 package util;
 
 import processors.CacheAdapter;
-import com.sun.istack.internal.Nullable;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -11,7 +10,6 @@ public enum Cache implements CacheAdapter<String, Map<String, String>> {
 
     INSTANCE {
         public synchronized
-        @Nullable
         Map<String, String> get(final String key) {
             if (key == null) {
                 return null;
