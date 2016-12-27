@@ -16,7 +16,8 @@ final class ServiceController {
     Map<String, String> process(@RequestParam(value = "id", defaultValue = "0") final String id,
                                 @RequestParam(value = "versionOfBD", defaultValue = "1") final int versionOfBD) {
 
-        Task<Map<String, String>> task = new Task<>(FacturaDataStream.getInstance(0, versionOfBD),
+        Task<Map<String, String>> task = new Task<>(
+                FacturaDataStream.getInstance(0, versionOfBD),
                 FacturaDataParser.getInstance(), id);
         try {
             return ThreadPool.INSTANCE.submit(task).get();
@@ -24,6 +25,5 @@ final class ServiceController {
             e.printStackTrace();
             return null;
         }
-
     }
 }
