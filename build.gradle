@@ -13,8 +13,6 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'application'
 
-mainClassName = 'controller.Application'
-
 jar {
     baseName = 'RestService'
     version =  '0.1.0'
